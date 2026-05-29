@@ -1,0 +1,83 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ titulo }}</title>
+    <link rel="stylesheet" href="{% static 'mi_marca/css/style.css' %}">
+</head>
+<body>
+    <header class="hero">
+        <nav class="menu">
+            <h2 class="logo">Colon<span>Vargas</span></h2>
+            <div class="links">
+                <a href="#perfil">Perfil</a>
+                <a href="#habilidades">Habilidades</a>
+                <a href="#proyectos">Proyectos</a>
+                <a href="#contacto">Contacto</a>
+                <a href="/principal/">App secundaria</a>
+            </div>
+        </nav>
+
+        <section class="hero-content">
+            <div class="text">
+                <p class="etiqueta">Marca personal</p>
+                <h1>{{ nombre }}</h1>
+                <h3>Desarrollador de Software en formación</h3>
+                <p>{{ descripcion }}</p>
+                <a href="#contacto" class="boton">Ver contacto</a>
+            </div>
+
+            <div class="foto-card">
+                <div class="avatar">CV</div>
+                <h3>Portafolio Digital</h3>
+                <p>Programación, creatividad y tecnología.</p>
+            </div>
+        </section>
+    </header>
+
+    <main>
+        <section id="perfil" class="seccion">
+            <h2>Perfil Profesional</h2>
+            <p>
+                Mi nombre es Colon Vargas. Actualmente me encuentro desarrollando habilidades en programación,
+                diseño web e inteligencia artificial. Este sitio representa mi marca personal y muestra
+                información sobre mis conocimientos, proyectos y metas profesionales.
+            </p>
+        </section>
+
+        <section id="habilidades" class="seccion oscuro">
+            <h2>Conocimientos Técnicos</h2>
+            <div class="grid">
+                {% for habilidad in habilidades %}
+                <div class="tarjeta">{{ habilidad }}</div>
+                {% endfor %}
+            </div>
+        </section>
+
+        <section id="proyectos" class="seccion">
+            <h2>Experiencias y Trabajos</h2>
+            <div class="proyectos">
+                {% for proyecto in proyectos %}
+                <article class="proyecto">
+                    <h3>{{ proyecto.nombre }}</h3>
+                    <p>{{ proyecto.detalle }}</p>
+                </article>
+                {% endfor %}
+            </div>
+        </section>
+
+        <section id="contacto" class="seccion contacto">
+            <h2>Redes y Contacto</h2>
+            <p><strong>Nombre:</strong> Colon Vargas</p>
+            <p><strong>Correo:</strong> tu_correo@example.com</p>
+            <p><strong>Ubicación:</strong> Ecuador</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 Colon Vargas - Portafolio profesional</p>
+    </footer>
+</body>
+</html>
