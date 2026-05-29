@@ -1,4 +1,4 @@
-# Portafolio Colon Vargas
+# odalis portafolio
 
 Proyecto Django de marca personal.
 
