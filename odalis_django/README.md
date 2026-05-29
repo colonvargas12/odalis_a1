@@ -1,5 +1,5 @@
 
-Proyecto: Portafolio Colon Vargas
+Proyecto: odalis
 
 Apps:
 - mi_marca (landing page principal)
