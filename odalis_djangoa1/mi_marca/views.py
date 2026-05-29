@@ -1,33 +1,26 @@
 from django.shortcuts import render
+from django.shortcuts import render
 
 def inicio(request):
-    contexto = {
-        "nombre": "Colon Vargas",
-        "titulo": "Portafolio Profesional de Colon Vargas",
-        "descripcion": "Estudiante enfocado en desarrollo de software, diseño web e inteligencia artificial.",
+    datos = {
+        "nombre": "Odalis",
+        "marca": "ODALIS | Perfil Digital",
+        "descripcion": "Estudiante interesada en el desarrollo web, la innovación tecnológica y el aprendizaje continuo.",
         "habilidades": [
             "Python",
             "Django",
-            "HTML",
-            "CSS",
+            "HTML5",
+            "CSS3",
             "JavaScript",
-            "Bases de datos",
-            "Inteligencia Artificial",
-            "Diseño web"
+            "Diseño Web"
         ],
         "proyectos": [
-            {
-                "nombre": "Landing Page Personal",
-                "detalle": "Página web creada para presentar mi marca personal e información profesional."
-            },
-            {
-                "nombre": "Sistema Web Educativo",
-                "detalle": "Proyecto orientado al aprendizaje mediante herramientas digitales."
-            },
-            {
-                "nombre": "Asistente con IA",
-                "detalle": "Idea de asistente inteligente para apoyar tareas académicas y tecnológicas."
-            }
+            "Perfil digital interactivo",
+            "Aplicación web académica",
+            "Sistema de gestión de información"
         ]
     }
-    return render(request, "mi_marca/index.html", contexto)
+
+    return render(request, 'mi_marca/index.html', datos)
+def principal(request):
+    return render(request, "principal/index.html")
