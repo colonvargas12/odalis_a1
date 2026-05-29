@@ -1,1 +1,0 @@
-print('Proyecto Django Portafolio Colon Vargas')
